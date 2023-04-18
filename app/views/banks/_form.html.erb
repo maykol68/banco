@@ -1,0 +1,15 @@
+<%= form_with model: @bank do |form|%>
+    <% @bank.errors.full_messages.each do |error| %>
+        <%= error %>
+    <% end %>
+    <div>
+        <%= form.label :name%>
+        <%= form.text_field :name%>
+    </div>
+    <div>
+        <%= form.label :bank_account_number%>
+        <%= form.text_field :bank_account_number%>
+    </div>
+    
+    <%= form.submit %>
+<% end %>

@@ -1,0 +1,9 @@
+<h1><%= @bank.name %></h1>
+<h1><%= @bank.bank_account_number %></h1>
+
+<%= link_to 'Editar banco', edit_bank_path(@bank)%>
+
+<%= link_to 'Eliminar banco', bank_path(@bank), data: {
+    turbo_method: :delete,
+    turbo_confirm: '¿Estas seguro?'
+    }%>
