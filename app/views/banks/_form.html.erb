@@ -1,6 +1,8 @@
 <%= form_with model: @bank do |form|%>
     <% @bank.errors.full_messages.each do |error| %>
+        <div>
         <%= error %>
+        </div>
     <% end %>
     <div>
         <%= form.label :name%>

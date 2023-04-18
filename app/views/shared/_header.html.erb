@@ -1,5 +1,5 @@
 <%= link_to banks_path do %>
-    <h1>Banks</h1>
+    <h1><%= t('.title') %></h1>
 <% end %>
 
-<%= link_to 'Añadir banco', new_bank_path %>
+<%= link_to t('.add'), new_bank_path %>
