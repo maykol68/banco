@@ -4,7 +4,7 @@ class BanksController < ApplicationController
     end
 
     def show
-       @bank = Bank.find(params[:id])
+       bank
     end
 
     def new
@@ -22,13 +22,11 @@ class BanksController < ApplicationController
     end
 
     def edit
-        @bank = Bank.find(params[:id])
+        bank
     end
 
     def update
-        @bank = Bank.find(params[:id])
-
-        if @bank.update(bank_params)
+        if bank.update(bank_params)
             redirect_to banks_path, notice: 'Tu banco se ha actualizado correctamente'
         else
             render :edit, status: :unprocessable_entity  
@@ -36,8 +34,7 @@ class BanksController < ApplicationController
     end
 
     def destroy 
-        @bank = Bank.find(params[:id])
-        @bank.destroy
+        bank.destroy
 
         redirect_to banks_path, notice: 'Tu banco se ha elimnado correctamente', status: :see_other
     end
@@ -47,5 +44,9 @@ class BanksController < ApplicationController
 
     def bank_params
         params.require(:bank).permit(:name, :bank_account_number)
+    end
+
+    def bank
+        @bank = Bank.find(params[:id])
     end
 end

@@ -1,7 +1,3 @@
+<h1>Bancos:</h1>
 
-
-<% @banks.each do |bank| %>
-    <%= link_to bank_path(bank.id) do %>
-        <h2><%= bank.name %></h2>
-    <% end %>
-<% end %>
+<%= render partial: 'bank', collection: @banks %>
