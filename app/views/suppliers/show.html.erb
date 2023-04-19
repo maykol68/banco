@@ -1,0 +1,12 @@
+<h1 class='name'><%= @supplier.name %></h1>
+<h1 class= 'nit'><%= @supplier.nit %></h1>
+<h1 class='Name_of_the_contact_person'><%= @supplier.Name_of_the_contact_person %></h1>
+<h1 class= 'Contact_person_cell_phone_number'><%= @supplier.Contact_person_cell_phone_number %></h1>
+
+
+<%= link_to t('.edit'), edit_supplier_path(@supplier)%>
+w
+<%= link_to t('.delete'), supplier_path(@supplier), data: {
+    turbo_method: :delete,
+    turbo_confirm: t('common.confirm')
+    }%>

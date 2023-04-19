@@ -1,2 +1,43 @@
 es:
-  hello: "Hello world"
+  activerecord:
+    models:
+      supplier: Proveedor
+      bank: Banco
+    attributes:
+      bank:
+        name: 'Nombre de el banco'
+        bank_account_number: 'Numero de cuenta bancaria'
+      supplier:
+        name: 'Nombre de el proveedor'
+        nit: 'Nit del proveedor'
+        Name_of_the_contact_person: 'Nombre de la persona de contacto'
+        Contact_person_cell_phone_number: 'Número de celular de la persona de contacto'
+  common:
+    confirm: '¿Estas seguro?'
+  suppliers:
+    index:
+      new: 'Crear proveedor'
+      title: 'Proveedores'
+    new:
+      title: 'Crea un Proveedor'
+  banks:
+    show:
+      delete: 'Emiminar banco'
+      edit: 'Editar banco'
+    new:
+      title: 'Agregar un Banco'
+    index:
+      title: 'Bancos:'
+    edit:
+      edit: 'Editar Banco'
+    create:
+      created: 'Tu banco ha sido creado!'
+    update:
+      updated: 'Tu banco ha sido actualizado!'
+    destroy:
+      removed: 'Tu banco ha sido eliminado!'
+  shared:
+    header:
+      title: 'Bancos'
+      add: 'Agregar Banco'
+      suppliers: 'Ver Proveedores'
