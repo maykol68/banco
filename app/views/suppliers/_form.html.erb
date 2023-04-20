@@ -10,7 +10,7 @@
     </div>
     <div>
         <%= form.label :nit%>:
-        <%= form.text_field :nit%>
+        <%= form.number_field :nit%>
     </div>
     <div>
         <%= form.label :Name_of_the_contact_person%>:
@@ -18,9 +18,13 @@
     </div>
     <div>
         <%= form.label :Contact_person_cell_phone_number%>:
-        <%= form.text_field :Contact_person_cell_phone_number%>
+        <%= form.number_field :Contact_person_cell_phone_number%>
     </div>
 
+    <div>
+        <%= form.label :bank_id %>
+        <%= form.collection_select :bank_id, Bank.all.order(name: :asc), :id, :name %>
+    </div>
     
     <%= form.submit %>
 <% end %>

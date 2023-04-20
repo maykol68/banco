@@ -1,13 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  nit: MyString
-  Name_of_the_contact_person: MyString
-  Contact_person_cell_phone_number: MyString
+pedro:
+  name: pedro
+  nit: 10256437
+  Name_of_the_contact_person: sara
+  Contact_person_cell_phone_number: 12346746
+  bank: bankagro
 
-two:
-  name: MyString
-  nit: MyString
-  Name_of_the_contact_person: MyString
-  Contact_person_cell_phone_number: MyString
+juan:
+  name: juan
+  nit: 94656758
+  Name_of_the_contact_person: maria
+  Contact_person_cell_phone_number: 12875447
+  bank: bankrus

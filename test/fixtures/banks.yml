@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  bank_account_number: MyString
+bankagro:
+  name: bancoagro
+  bank_account_number: 12345678-9
 
-two:
-  name: MyString
-  bank_account_number: MyString
+bankrus:
+  name: bancorus
+  bank_account_number: 123456782-9

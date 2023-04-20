@@ -1,6 +1,6 @@
 class SuppliersController < ApplicationController
     def index
-        @suppliers = Supplier.all
+        @suppliers = Supplier.all.order(created_at: :desc)
     end
 
     def show
@@ -43,7 +43,7 @@ class SuppliersController < ApplicationController
     private
 
     def supplier_params
-        params.require(:supplier).permit(:name, :nit, :Name_of_the_contact_person, :Contact_person_cell_phone_number)
+        params.require(:supplier).permit(:name, :nit, :Name_of_the_contact_person, :Contact_person_cell_phone_number, :bank_id)
     end
 
     def supplier
