@@ -1,17 +1,15 @@
-<%= form_with(url: sessions_path) do |form|%>
-    <% @user.errors.full_messages.each do |error| %>
-        <div>
-        <%= error %>
-        </div>
-    <% end %>
-    <div>
-        <%= form.label :login%>
-        <%= form.text_field :login%>
-    </div>
-    <div>
-        <%= form.label :password%>
-        <%= form.password_field :password%>
-    </div>
-    
+<%= form_with(url: sessions_path) do |form| %>
+  <div>
+    <%= form.label :inicio %>
+    <%= form.text_field :login %>
+  </div>
+
+  <div>
+    <%= form.label :contraseña %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div>
     <%= form.submit %>
+  </div>
 <% end %>

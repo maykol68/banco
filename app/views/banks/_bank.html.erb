@@ -1,5 +1,9 @@
-<% @banks.each do |bank| %>
-    <%= link_to bank_path(bank.id) do %>
+
+<%= link_to bank_path(bank), class: 'bank bg-white mb-2 rounded sm:w-[calc(33.3333%_-_.5rem)] lg:w-[calc(25%_-_.5rem)]', 'data-turbo-frame': '_top' do %>
+
+    <div class="m-2">
         <h2><%= bank.name %></h2>
-    <% end %>
+        <h2><%= bank.bank_account_number %></h2>
+    </div>
 <% end %>
+    

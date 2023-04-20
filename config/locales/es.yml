@@ -1,6 +1,14 @@
 es:
   activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              too_short: 'La contraseña es muy corta'
+              
     models:
+      user: Usuario
       supplier: Proveedor
       bank: Banco
     attributes:
@@ -12,8 +20,13 @@ es:
         nit: 'Nit del proveedor'
         Name_of_the_contact_person: 'Nombre de la persona de contacto'
         Contact_person_cell_phone_number: 'Número de celular de la persona de contacto'
+      user:
+        username: 'Nombre de usuario'
+        password: 'Contraseña'
+        email: 'Correo'
   common:
     confirm: '¿Estas seguro?'
+    not_logged_in: 'Aun no estas logueado'
   suppliers:
     index:
       new: 'Crear proveedor'
@@ -41,3 +54,14 @@ es:
       title: 'Bancos'
       add: 'Agregar Banco'
       suppliers: 'Ver Proveedores'
+      login: 'Ingresar'
+      register: 'Registrar'
+      logout: 'Salir'
+  authentication:
+    sessions:
+      create:
+        failed: 'No se ha podido crear tu usuario'
+    users:
+      create:
+        created: 'Se ha creado tu usuario'
+

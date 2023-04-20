@@ -1,6 +1,7 @@
-<% @suppliers.each do |supplier| %>
-    <%= link_to supplier_path(supplier.id) do %>
+<%= link_to supplier_path(supplier), class: 'supplier bg-white mb-2 rounded sm:w-[calc(33.3333%_-_.5rem)] lg:w-[calc(25%_-_.5rem)]', 'data-turbo-frame': '_top' do %>
+
+    <div>
         <h2><%= t('.name')%></h2><h2><%= supplier.name %></h2>
         <h2><%= t('.nit')%></h2><h2><%= supplier.nit %></h2>
-    <% end %>
+    </div>
 <% end %>

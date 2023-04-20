@@ -1,6 +1,15 @@
+<div >
 <%= link_to banks_path do %>
     <h1><%= t('.title') %></h1>
 <% end %>
 
-<%= link_to t('.add'), new_bank_path %><br>
-<%= link_to t('.suppliers'), suppliers_path %>
+<div class="hidden sm:block lg:flex ">
+<%= link_to t('.add'), new_bank_path, class: "mx-2 text-teal-500 font-bold" if Current.user%><br>
+<%= link_to t('.suppliers'), suppliers_path, class: "mx-2 text-teal-500 font-bold"  if Current.user%>
+<%= link_to t('.login'), new_session_path, class: "mx-2 text-teal-500 font-bold" unless Current.user %>
+<%= link_to t('.register'), new_user_path, class: "mx-2 text-teal-500 font-bold" unless Current.user %>
+<%= link_to t('.logout'), new_session_path(Current.user.id), data: {
+      turbo_method: :delete,
+      turbo_confirm: t('common.confirm')
+    }, class: "mx-2 text-teal-500 font-bold" if Current.user %>
+</div>
