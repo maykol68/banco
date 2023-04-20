@@ -2,7 +2,7 @@
 <h1 class= 'bank_account_number'><%= @bank.bank_account_number %></h1>
 
 <%= link_to t('.edit'), edit_bank_path(@bank)%>
-w
+
 <%= link_to t('.delete'), bank_path(@bank), data: {
     turbo_method: :delete,
     turbo_confirm: t('common.confirm')

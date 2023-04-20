@@ -1,6 +1,6 @@
 <% @suppliers.each do |supplier| %>
     <%= link_to supplier_path(supplier.id) do %>
-        <h2><%= supplier.name %></h2>
-        <h2><%= supplier.nit %></h2>
+        <h2><%= t('.name')%></h2><h2><%= supplier.name %></h2>
+        <h2><%= t('.nit')%></h2><h2><%= supplier.nit %></h2>
     <% end %>
 <% end %>
