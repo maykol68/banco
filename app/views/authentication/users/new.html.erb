@@ -5,16 +5,16 @@
         </div>
     <% end %>
     <div>
-        <%= form.label :email%>
-        <%= form.email_field :email%>
+        <%= form.label :email %>
+        <%= form.email_field :email, require: true%>
     </div>
     <div>
         <%= form.label :username%>
-        <%= form.text_field :username%>
+        <%= form.text_field :username, require: true%>
     </div>
     <div>
         <%= form.label :password%>
-        <%= form.password_field :password%>
+        <%= form.password_field :password, require: true%>
     </div>
     
     <%= form.submit %>
